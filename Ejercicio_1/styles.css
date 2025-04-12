@@ -1,0 +1,21 @@
+/*EJERCICIO 1*/
+.compartida {
+    color: mediumslateblue;
+}
+
+p{
+    font-size: 10px;
+}
+
+p.compartida{
+    font-weight: bold;
+}
+
+p.texto{
+    color: crimson;
+}
+
+div h2 {
+    border-radius: 15px;
+    border: 5px solid blue ;
+}
