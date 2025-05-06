@@ -42,3 +42,54 @@ function imprimirConRetrasoRecurs(arr, i){
 
 imprimirConRetraso(a)
 
+//Ejercicio 4 - callback
+function operar(n1,n2,operacion){
+    return operacion(n1,n2);
+}
+
+function suma(n1,n2){
+    return n1+n2;
+}
+function multiplicacion(n1,n2){
+    return n1*n2;
+}
+
+console.log(operar(2,4,suma))
+console.log(operar(2,4,multiplicacion))
+
+//Ejercicio 5 - Contador con Botones
+
+let botonInc = document.getElementById("botonIncrementar");
+let botonDec = document.getElementById("botonDecrementar");
+let display = document.getElementById("displayContador");
+let contador = 0;
+
+function actualizarDisplay(){
+    display.innerText = contador.toString();
+}
+function incrementarContador(e){
+    contador++;
+    actualizarDisplay();
+}
+function decrementarContador(e){
+    contador--;
+    actualizarDisplay();
+}
+
+actualizarDisplay();
+
+botonInc.addEventListener("click",incrementarContador);
+botonDec.addEventListener("click",decrementarContador);
+
+//Ejercicio 6 - Cambiar texto de párrafos
+const parrafos = document.getElementsByTagName("p");
+
+function cambiarTexto(textoNuevo){
+    for (parrafo of parrafos){
+        parrafo.innerText = textoNuevo;
+    }
+}
+let botonCambiarTxt = document.getElementById("botonTexto");
+botonCambiarTxt.addEventListener("click",()=>{
+    cambiarTexto(prompt());
+});
